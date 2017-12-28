@@ -24,7 +24,7 @@
     {{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}">{{ end }}
     <img class="avatar" src="{{ "images/avatar.png" | absURL }}">
     <div>
-        <span class="dark">{{ .Site.Params.name }}</span>
+        <span class="dark">{{ .Site.Params.author }}</span>
         <span>{{ .Site.Params.aboutAuthor }}</span>
     </div>
     {{ with .Site.Params.twitter }}</a>{{ end }}
