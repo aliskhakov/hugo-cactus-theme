@@ -162,9 +162,13 @@ a,
 #post-list a:hover,
 #post-list li:hover .dates,
 #title:hover {
-	text-decoration: none;
 	color: #5badf0;
 	color: #5694f1;
+}
+
+#sharing a,
+a.cta {
+	text-decoration: none;
 }
 
 p a { color: #5694f1; }
