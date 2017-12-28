@@ -5,7 +5,8 @@
     {{ $othr := where $kind "URL" "!=" .URL }}
     {{ range first 10 $othr }}
         <li>
-            <a href="{{ .URL }}">{{ .LinkTitle }}<aside class="dates">{{ .Date.Format "Jan 2 2006" }}</aside></a>
+            <a href='{{ .URL }}'><aside class="dates">{{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }}</aside></a>
+            <a href='{{ .URL }}'>{{ .LinkTitle }}</a>
         </li>
     {{ end }}
 </ul>
