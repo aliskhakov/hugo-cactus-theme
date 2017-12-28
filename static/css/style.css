@@ -253,10 +253,14 @@ em, i { font-style: italic; }
 	margin: -5px 0 40px 0;
 	color: #b2b9be;
 	  font-size: 13px;
-	  /*text-transform: uppercase;*/
 	  letter-spacing: 2px;
 	  /*margin-top: 15px;*/
 	  display: inline-block;
+}
+
+.post p img {
+	display: block;
+    margin: 0 auto;
 }
 
 #post-list h2 {
