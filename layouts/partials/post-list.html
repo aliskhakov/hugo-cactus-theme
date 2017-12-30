@@ -1,8 +1,12 @@
 <ul id="post-list">
     {{ range where .Paginator.Pages "Section" "ne" "" }}
         <li>
-            <a href='{{ .URL }}'><aside class="dates">{{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }}</aside></a>
-            <a href='{{ .URL }}'>{{ .LinkTitle }}<h2>{{ .Description | markdownify }}</h2></a>
+	    <a href='{{ .URL }}' class="title">{{ .LinkTitle }}</a>
+	    <div class="dates">{{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }}</div>
+	    <div>
+		    <p>{{ .Description | markdownify }}</p>
+		    <a href="{{ .URL }}">Продолжение...</a>
+	    </div>
         </li>
     {{ end }}
 </ul>
